@@ -6,13 +6,8 @@ int32_t fix_add(int32_t a, int32_t b)
 {
 	uint32_t tmp_a = a;
 	uint32_t tmp_b = b;
-
-	uint32_t sum = a + b;
-
-	printf("(tmp_a & (uint32_t)(1 << 32) = %d\n", (tmp_a & (uint32_t)(1 << 32)));
-	printf("(tmp_b & (uint32_t)(1 << 32) = %d\n", (tmp_b & (uint32_t)(1 << 32)));
-	printf("sum & (uint32_t)(1 << 32) = %d\n", sum & (uint32_t)(1 << 32));
-	if ((tmp_a & (uint32_t)(1 << 32) == tmp_b & (uint32_t)(1 << 32)) && (tmp_a & (uint32_t)(1 << 32) != sum & (uint32_t)(1 << 32)))
+	uint32_t sum = tmp_a + tmp_b;
+	if (!((tmp_a ^ tmp_b) >> 32) && ((tmp_a ^ sum) >> 32))
 	{
 		printf("sum overflow \n");
 		return (a >= 0) ? INT32_MAX : INT32_MIN;
@@ -24,10 +19,9 @@ int32_t fix_sub(int32_t a, int32_t b)
 {
 	uint32_t tmp_a = a;
 	uint32_t tmp_b = b;
+	uint32_t sub = tmp_a - tmp_b;
 
-	uint32_t sub = a - b;
-
-	if (((tmp_a & (uint32_t)(1 << 32)) != tmp_b & (uint32_t)(1 << 32)) && (tmp_a & (uint32_t)(1 << 32) != sub & (uint32_t)(1 << 32)))
+	if (((tmp_a ^ tmp_b) >> 32) && ((tmp_a ^ sub) >> 32))
 	{
 		printf("sub overflow \n");
 		return (a >= 0) ? INT32_MAX : INT32_MIN;
@@ -37,15 +31,11 @@ int32_t fix_sub(int32_t a, int32_t b)
 
 int32_t fix_mul(int32_t a, int32_t b)
 {
-	uint32_t tmp_a = a;
-	uint32_t tmp_b = b;
+	int64_t tmp_a = a;
+	int64_t tmp_b = b;
 
-	int64_t	mul = ((int64_t)a * (int64_t)b) >> 16;
-	if (((tmp_a ^ tmp_b) & (uint32_t)(1 << 32)) != ((uint32_t)(mul) & (uint32_t)(1 << 32)))
-	{
-		printf("mul overflow \n");
-		return ((uint32_t)mul & (uint32_t)(1 << 32)) ? INT32_MAX : INT32_MIN;
-	}
+	int64_t	mul = (tmp_a * tmp_b) >> 31;
+
 	return (int32_t)mul;
 }
 

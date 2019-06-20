@@ -7,56 +7,78 @@
 
 void add_test()
 {
+	printf("\n\t==ADD_TEST==\n");
 	//basic
-	double n = 3.1415926;
-	unsigned int fix_n = DOUBLE2FIX(n);
-	printf("%.6f + %.6f = %.6f\n", FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_add(fix_n, fix_n)));
-	printf("answer: %.6f\n", n + n);
-	//overflow test
-	unsigned int fix_max = UINT32_MAX;
-	printf("n = %.6f\n", FIX2DOUBLE(fix_n));
+	printf("\n basic test\n");
+	double n = 0.1415926;
+	int fix_n = DOUBLE2FIX(n);
+	printf("n = %d => %.9f\n", fix_n, FIX2DOUBLE(fix_n));
+	printf("%.9f + %.9f = %.9f\n", FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_add(fix_n, fix_n)));
+	printf("answer: %.9f\n", n + n);
+
+	// positive overflow test
+	printf("\n positive overflow test\n");
+	int32_t fix_max = INT32_MAX;
+	printf("fix_max = %d => %.9f\n", fix_max, FIX2DOUBLE(fix_max));
 	printf("fix_max + fix_max = %.6f\n", FIX2DOUBLE(fix_add(fix_max, fix_max)));
 
+
+	// negative overflow test
+	printf("\n negative overflow test\n");
+	int32_t fix_min = INT32_MIN;
+	printf("fix_min = %d => %.9f\n", fix_min, FIX2DOUBLE(fix_min));
+	printf("fix_min + fix_min = %.6f\n", FIX2DOUBLE(fix_add(fix_min, fix_min)));
+}
+
+void sub_test()
+{
+	printf("\n\t==SUB_TEST==\n");
+	//basic
+	printf("\n basic test\n");
+	double n = 0.1415926;
+	int fix_n = DOUBLE2FIX(n);
+	printf("n = %d => %.9f\n", fix_n, FIX2DOUBLE(fix_n));
+	printf("%.9f + %.9f = %.9f\n", FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_sub(fix_n, fix_n)));
+	printf("answer: %.9f\n", n + n);
+
+	// positive overflow test
+	printf("\n positive overflow test\n");
+	int32_t fix_max = INT32_MAX;
+	printf("fix_max = %d => %.9f\n", fix_max, FIX2DOUBLE(fix_max));
+	printf("-fix_max = %d => %.9f\n", -fix_max, FIX2DOUBLE(-fix_max));
+	printf("fix_max - (-fix_max) = %.6f\n", FIX2DOUBLE(fix_sub(fix_max, -fix_max)));
+
+
+	// negative overflow test
+	printf("\n negative overflow test\n");
+	int32_t fix_min = INT32_MIN;
+	fix_min++;
+	printf("fix_min = %d => %.9f\n", fix_min, FIX2DOUBLE(fix_min));
+	printf("-fix_min = %d => %.9f\n", -fix_min, FIX2DOUBLE(-fix_min));
+	printf("fix_min - (-fix_min) = %.6f\n", FIX2DOUBLE(fix_sub(fix_min, -fix_min)));
+}
+
+void mul_test()
+{
+	printf("\n\t==MUL_TEST==\n");
+	//basic
+	printf("\n basic test\n");
+	double n = 0.1415926;
+	int fix_n = DOUBLE2FIX(n);
+	printf("n = %d => %.9f\n", fix_n, FIX2DOUBLE(fix_n));
+	printf("%.9f x %.9f = %.9f\n", FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_n), FIX2DOUBLE(fix_mul(fix_n, fix_n)));
+	printf("answer: %.9f\n", n * n);
+
+	int32_t fix_max = INT32_MAX;
+	printf("fix_max = %d => %.9f\n", fix_max, FIX2DOUBLE(fix_max));
+	printf("-fix_max = %d => %.9f\n", -fix_max, FIX2DOUBLE(-fix_max));
+	printf("fix_max * (-fix_max) = %.6f\n", FIX2DOUBLE(fix_mul(fix_max, -fix_max)));
 }
 
 int main()
 {
 	add_test();
+	sub_test();
+	mul_test();
 	return 0;
-//	unsigned int fix_max = UINT32_MAX;
-//	int fix_smax = UINT32_MAX;
-//
-//	unsigned int fix_min = 0x000;
-//
-//	printf("n = %.6f\n", n);
-//	printf("n = %.6f\n", FIX2DOUBLE(fix_smax));
-//	fix_smax <<= 10;
-//	printf("n = %.6f\n", FIX2DOUBLE(fix_smax));
-//	printf("fixmax(%u) = %.6f\n", (int)fix_max, FIX2DOUBLE(fix_max));
-//	printf("fixmin = %.6f\n", FIX2DOUBLE(fix_min));
-//
-//	printf("2*pi = %.6f\n", n + n);
-//
-//	printf("0*pi = %.6f\n", FIX2DOUBLE(fix_sub(fix_n, fix_n)));
-//	printf("0*pi = %.6f\n", n - n);
-//
-//	printf("2*pi = %.6f\n", FIX2DOUBLE(fix_mul(DOUBLE2FIX(2.0), fix_n)));
-//	printf("2*pi = %.6f\n", 2 * n);
-//
-//	double arr[5] = { 10.1, 10.25, 10.5, 110.75, 10.9};
-//	int fix_arr[5];
-//	double accum = 0;
-//	long long fix_accum = 0;
-//	for (int i = 0; i < 5; i++)
-//	{
-//		fix_arr[i] = DOUBLE2FIX(arr[i]);
-//		accum += arr[i] * arr[i];
-//	}
-//	printf("accum = %.6f\n", accum);
-//	fix_mac(&fix_accum, fix_arr, 5, fix_arr, 5);
-//	printf("fix_accum = %.6f\n", FIX2DOUBLE(fix_accum));
-//	fix_msub(&fix_accum, fix_arr, 5, fix_arr, 5);
-//	printf("fix_accum = %.6f\n", FIX2DOUBLE(fix_accum));
-    return 0;
 }
-

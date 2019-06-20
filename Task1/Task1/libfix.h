@@ -3,16 +3,27 @@
 
 #include <stdint.h>
 
-#define	Q16_16 int32_t
-#define	Q32_32 int64_t
+#define PRECISION		31 
 
-#define PRECISION		16 
+#define FLOAT2FIX(num) (num * (float)((1 << PRECISION)-1))
+#define FIX2FLOAT(num) ((float)num / ((1 << PRECISION)-1))
 
-#define FLOAT2FIX(num) (num * (float)(1 << PRECISION))
-#define FIX2FLOAT(num) ((float)num / (1 << PRECISION))
+#define DOUBLE2FIX(num) (num * (double)((1 << PRECISION)-1))
+#define FIX2DOUBLE(num) ((double)num / ((1 << PRECISION)-1))
 
-#define DOUBLE2FIX(num) (num * (double)(1 << PRECISION))
-#define FIX2DOUBLE(num) ((double)num / (1 << PRECISION))
+#define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
+
+#define BYTE_TO_BINARY(byte)  \
+					(byte & 0x80 ? '1' : '0'), \
+					(byte & 0x40 ? '1' : '0'), \
+					(byte & 0x20 ? '1' : '0'), \
+					(byte & 0x10 ? '1' : '0'), \
+					(byte & 0x08 ? '1' : '0'), \
+					(byte & 0x04 ? '1' : '0'), \
+					(byte & 0x02 ? '1' : '0'), \
+					(byte & 0x01 ? '1' : '0') 
+
+#define INT_TO_BINARY(num)
 
 int32_t fix_add(int32_t a, int32_t b);
 
