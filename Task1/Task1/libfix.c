@@ -2,6 +2,22 @@
 #include <stdint.h>
 #include <stdio.h>
 
+int32_t	float_to_fix(double num)
+{
+	int32_t	fixed;
+
+	if (num < -1)
+		return INT32_MIN;
+	if (num >= 1)
+		return INT32_MAX;
+	return num * SCALE;
+}
+
+double	fix_to_float(int32_t num)
+{
+	return (num / SCALE);
+}
+
 int32_t fix_add(int32_t a, int32_t b)
 {
 	uint32_t tmp_a = a;
