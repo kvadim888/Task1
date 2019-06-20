@@ -23,6 +23,7 @@ void add_test()
 	int32_t fix_max = INT32_MAX;
 	printf("fix_max = %d => %.9f\n", fix_max, fix_to_float(fix_max));
 	printf("fix_max + fix_max = %.6f\n", fix_to_float(fix_add(fix_max, fix_max)));
+	printf("-fix_max + fix_max = %.6f\n", fix_to_float(fix_add(-fix_max, fix_max)));
 
 
 	// negative overflow test
@@ -30,6 +31,7 @@ void add_test()
 	int32_t fix_min = INT32_MIN;
 	printf("fix_min = %d => %.9f\n", fix_min, fix_to_float(fix_min));
 	printf("fix_min + fix_min = %.6f\n", fix_to_float(fix_add(fix_min, fix_min)));
+	printf("fix_min + fix_max = %.6f\n", fix_to_float(fix_add(fix_min, fix_max)));
 }
 
 void sub_test()
@@ -52,6 +54,7 @@ void sub_test()
 	printf("fix_max = %d => %.9f\n", fix_max, fix_to_float(fix_max));
 	printf("-fix_max = %d => %.9f\n", -fix_max, fix_to_float(-fix_max));
 	printf("fix_max - (-fix_max) = %.6f\n", fix_to_float(fix_sub(fix_max, -fix_max)));
+	printf("fix_max - fix_max = %.6f\n", fix_to_float(fix_sub(fix_max, fix_max)));
 
 
 	// negative overflow test
