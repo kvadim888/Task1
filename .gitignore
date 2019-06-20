@@ -1,4 +1,7 @@
+# build files
 [Dd]ebug/
 Task1/[Dd]ebug
-*.un
+
+# vim trash files
+*.un~
 *~
