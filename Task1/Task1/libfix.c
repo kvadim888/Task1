@@ -9,6 +9,9 @@ int32_t fix_add(int32_t a, int32_t b)
 
 	uint32_t sum = a + b;
 
+	printf("(tmp_a & (uint32_t)(1 << 32) = %d\n", (tmp_a & (uint32_t)(1 << 32)));
+	printf("(tmp_b & (uint32_t)(1 << 32) = %d\n", (tmp_b & (uint32_t)(1 << 32)));
+	printf("sum & (uint32_t)(1 << 32) = %d\n", sum & (uint32_t)(1 << 32));
 	if ((tmp_a & (uint32_t)(1 << 32) == tmp_b & (uint32_t)(1 << 32)) && (tmp_a & (uint32_t)(1 << 32) != sum & (uint32_t)(1 << 32)))
 	{
 		printf("sum overflow \n");
