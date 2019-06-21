@@ -40,8 +40,8 @@ void sub_test()
 	//basic
 	printf("\n basic test\n");
 	double n = 0.1415926;
-	int fix_n = DOUBLE2FIX(n);
-	int fix_zero = DOUBLE2FIX(0);
+	int fix_n = float_to_fix(n);
+	int fix_zero = float_to_fix(0);
 
 	printf("n = %d => %.9f\n", fix_n, fix_to_float(fix_n));
 	printf("%.9f - %.9f = %.9f\n", fix_to_float(fix_n), fix_to_float(fix_n), fix_to_float(fix_sub(fix_n, fix_n)));
@@ -155,7 +155,7 @@ void msub_test()
 
 void	lshift_test()
 {
-	int32_t fix_max = float_to_fix(1.0);
+	int32_t fix_max = float_to_fix(0.00000001);
 	printf("\nfix_max = %d => %.9f\n", fix_max, fix_to_float(fix_max));
 
 	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
@@ -211,7 +211,7 @@ void	lshift_test()
 	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
 	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
 
-	int32_t fix_min = float_to_fix(-1.0);
+	int32_t fix_min = float_to_fix(-0.00000001);
 	printf("\nfix_min = %d => %.9f\n", fix_min, fix_to_float(fix_min));
 
 	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
