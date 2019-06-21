@@ -386,12 +386,12 @@ void	rshift_test()
 
 int main()
 {
-	add_test();
-	sub_test();
-	mul_test();
+//	add_test();
+//	sub_test();
+//	mul_test();
 	mac_test();
 	msub_test();
-	lshift_test();
-	rshift_test();
+//	lshift_test();
+//	rshift_test();
 	return 0;
 }

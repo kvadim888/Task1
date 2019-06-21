@@ -34,8 +34,8 @@ int32_t	fix_round(int64_t num)
 {
 	long_fix tmp;
 
-	tmp.num = num;
-	return (tmp.range[0] >= UINT32_MAX / 2) ? tmp.range[1] + 1  : tmp.range[1];
+	tmp.num = num + ((uint64_t)1 << 31);
+	return tmp.range[1];
 }
 
 int32_t fix_add(int32_t a, int32_t b)
