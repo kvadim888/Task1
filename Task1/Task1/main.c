@@ -153,6 +153,237 @@ void msub_test()
 	printf("fix_acc = %.9f\n", fix_to_float(fix_acc));
 }
 
+void	lshift_test()
+{
+	int32_t fix_max = float_to_fix(1.0);
+	printf("\nfix_max = %d => %.9f\n", fix_max, fix_to_float(fix_max));
+
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_leftshift(fix_max, 2), fix_to_float(fix_leftshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_leftshift(fix_max, 3), fix_to_float(fix_leftshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_leftshift(fix_max, 4), fix_to_float(fix_leftshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_leftshift(fix_max, 5), fix_to_float(fix_leftshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_leftshift(fix_max, 6), fix_to_float(fix_leftshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
+
+	fix_max = fix_leftshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_leftshift(fix_max, 2), fix_to_float(fix_leftshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_leftshift(fix_max, 3), fix_to_float(fix_leftshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_leftshift(fix_max, 4), fix_to_float(fix_leftshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_leftshift(fix_max, 5), fix_to_float(fix_leftshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_leftshift(fix_max, 6), fix_to_float(fix_leftshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
+	
+	fix_max = fix_leftshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_leftshift(fix_max, 2), fix_to_float(fix_leftshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_leftshift(fix_max, 3), fix_to_float(fix_leftshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_leftshift(fix_max, 4), fix_to_float(fix_leftshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_leftshift(fix_max, 5), fix_to_float(fix_leftshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_leftshift(fix_max, 6), fix_to_float(fix_leftshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
+
+	fix_max = fix_leftshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_leftshift(fix_max, 2), fix_to_float(fix_leftshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_leftshift(fix_max, 3), fix_to_float(fix_leftshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_leftshift(fix_max, 4), fix_to_float(fix_leftshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_leftshift(fix_max, 5), fix_to_float(fix_leftshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_leftshift(fix_max, 6), fix_to_float(fix_leftshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
+
+	fix_max = fix_leftshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_leftshift(fix_max, 1), fix_to_float(fix_leftshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_leftshift(fix_max, 2), fix_to_float(fix_leftshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_leftshift(fix_max, 3), fix_to_float(fix_leftshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_leftshift(fix_max, 4), fix_to_float(fix_leftshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_leftshift(fix_max, 5), fix_to_float(fix_leftshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_leftshift(fix_max, 6), fix_to_float(fix_leftshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_leftshift(fix_max, 7), fix_to_float(fix_leftshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) <%d< %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_leftshift(fix_max, 8), fix_to_float(fix_leftshift(fix_max, 8)));
+
+	int32_t fix_min = float_to_fix(-1.0);
+	printf("\nfix_min = %d => %.9f\n", fix_min, fix_to_float(fix_min));
+
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_leftshift(fix_min, 2), fix_to_float(fix_leftshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_leftshift(fix_min, 3), fix_to_float(fix_leftshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_leftshift(fix_min, 4), fix_to_float(fix_leftshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_leftshift(fix_min, 5), fix_to_float(fix_leftshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_leftshift(fix_min, 6), fix_to_float(fix_leftshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_leftshift(fix_min, 7), fix_to_float(fix_leftshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_leftshift(fix_min, 8), fix_to_float(fix_leftshift(fix_min, 8)));
+
+	fix_min = fix_leftshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_leftshift(fix_min, 2), fix_to_float(fix_leftshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_leftshift(fix_min, 3), fix_to_float(fix_leftshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_leftshift(fix_min, 4), fix_to_float(fix_leftshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_leftshift(fix_min, 5), fix_to_float(fix_leftshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_leftshift(fix_min, 6), fix_to_float(fix_leftshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_leftshift(fix_min, 7), fix_to_float(fix_leftshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_leftshift(fix_min, 8), fix_to_float(fix_leftshift(fix_min, 8)));
+
+	fix_min = fix_leftshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_leftshift(fix_min, 2), fix_to_float(fix_leftshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_leftshift(fix_min, 3), fix_to_float(fix_leftshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_leftshift(fix_min, 4), fix_to_float(fix_leftshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_leftshift(fix_min, 5), fix_to_float(fix_leftshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_leftshift(fix_min, 6), fix_to_float(fix_leftshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_leftshift(fix_min, 7), fix_to_float(fix_leftshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_leftshift(fix_min, 8), fix_to_float(fix_leftshift(fix_min, 8)));
+
+	fix_min = fix_leftshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_leftshift(fix_min, 2), fix_to_float(fix_leftshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_leftshift(fix_min, 3), fix_to_float(fix_leftshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_leftshift(fix_min, 4), fix_to_float(fix_leftshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_leftshift(fix_min, 5), fix_to_float(fix_leftshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_leftshift(fix_min, 6), fix_to_float(fix_leftshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_leftshift(fix_min, 7), fix_to_float(fix_leftshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_leftshift(fix_min, 8), fix_to_float(fix_leftshift(fix_min, 8)));
+
+	fix_min = fix_leftshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_leftshift(fix_min, 1), fix_to_float(fix_leftshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_leftshift(fix_min, 2), fix_to_float(fix_leftshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_leftshift(fix_min, 3), fix_to_float(fix_leftshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_leftshift(fix_min, 4), fix_to_float(fix_leftshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_leftshift(fix_min, 5), fix_to_float(fix_leftshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_leftshift(fix_min, 6), fix_to_float(fix_leftshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_leftshift(fix_min, 7), fix_to_float(fix_leftshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) <%d< %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_leftshift(fix_min, 8), fix_to_float(fix_leftshift(fix_min, 8)));
+}
+
+void	rshift_test()
+{
+	int32_t fix_max = float_to_fix(1.0);
+	printf("\nfix_max = %d => %.9f\n", fix_max, fix_to_float(fix_max));
+
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_rightshift(fix_max, 1), fix_to_float(fix_rightshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_rightshift(fix_max, 2), fix_to_float(fix_rightshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_rightshift(fix_max, 3), fix_to_float(fix_rightshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_rightshift(fix_max, 4), fix_to_float(fix_rightshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_rightshift(fix_max, 5), fix_to_float(fix_rightshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_rightshift(fix_max, 6), fix_to_float(fix_rightshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_rightshift(fix_max, 7), fix_to_float(fix_rightshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_rightshift(fix_max, 8), fix_to_float(fix_rightshift(fix_max, 8)));
+
+	fix_max = fix_rightshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_rightshift(fix_max, 1), fix_to_float(fix_rightshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_rightshift(fix_max, 2), fix_to_float(fix_rightshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_rightshift(fix_max, 3), fix_to_float(fix_rightshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_rightshift(fix_max, 4), fix_to_float(fix_rightshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_rightshift(fix_max, 5), fix_to_float(fix_rightshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_rightshift(fix_max, 6), fix_to_float(fix_rightshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_rightshift(fix_max, 7), fix_to_float(fix_rightshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_rightshift(fix_max, 8), fix_to_float(fix_rightshift(fix_max, 8)));
+
+	fix_max = fix_rightshift(fix_max, 8);
+	
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_rightshift(fix_max, 1), fix_to_float(fix_rightshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_rightshift(fix_max, 2), fix_to_float(fix_rightshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_rightshift(fix_max, 3), fix_to_float(fix_rightshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_rightshift(fix_max, 4), fix_to_float(fix_rightshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_rightshift(fix_max, 5), fix_to_float(fix_rightshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_rightshift(fix_max, 6), fix_to_float(fix_rightshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_rightshift(fix_max, 7), fix_to_float(fix_rightshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_rightshift(fix_max, 8), fix_to_float(fix_rightshift(fix_max, 8)));
+
+	fix_max = fix_rightshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_rightshift(fix_max, 1), fix_to_float(fix_rightshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_rightshift(fix_max, 2), fix_to_float(fix_rightshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_rightshift(fix_max, 3), fix_to_float(fix_rightshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_rightshift(fix_max, 4), fix_to_float(fix_rightshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_rightshift(fix_max, 5), fix_to_float(fix_rightshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_rightshift(fix_max, 6), fix_to_float(fix_rightshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_rightshift(fix_max, 7), fix_to_float(fix_rightshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_rightshift(fix_max, 8), fix_to_float(fix_rightshift(fix_max, 8)));
+
+	fix_max = fix_rightshift(fix_max, 8);
+
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 1, fix_rightshift(fix_max, 1), fix_to_float(fix_rightshift(fix_max, 1)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 2, fix_rightshift(fix_max, 2), fix_to_float(fix_rightshift(fix_max, 2)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 3, fix_rightshift(fix_max, 3), fix_to_float(fix_rightshift(fix_max, 3)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 4, fix_rightshift(fix_max, 4), fix_to_float(fix_rightshift(fix_max, 4)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 5, fix_rightshift(fix_max, 5), fix_to_float(fix_rightshift(fix_max, 5)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 6, fix_rightshift(fix_max, 6), fix_to_float(fix_rightshift(fix_max, 6)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 7, fix_rightshift(fix_max, 7), fix_to_float(fix_rightshift(fix_max, 7)));
+	printf("fix_max = %d (%.9f) >%d> %d (%.9f)\n", fix_max, fix_to_float(fix_max), 8, fix_rightshift(fix_max, 8), fix_to_float(fix_rightshift(fix_max, 8)));
+
+	int32_t fix_min = float_to_fix(-1.0);
+	printf("\nfix_min = %d => %.9f\n", fix_min, fix_to_float(fix_min));
+
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_rightshift(fix_min, 1), fix_to_float(fix_rightshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_rightshift(fix_min, 2), fix_to_float(fix_rightshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_rightshift(fix_min, 3), fix_to_float(fix_rightshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_rightshift(fix_min, 4), fix_to_float(fix_rightshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_rightshift(fix_min, 5), fix_to_float(fix_rightshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_rightshift(fix_min, 6), fix_to_float(fix_rightshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_rightshift(fix_min, 7), fix_to_float(fix_rightshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_rightshift(fix_min, 8), fix_to_float(fix_rightshift(fix_min, 8)));
+
+	fix_min = fix_rightshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_rightshift(fix_min, 1), fix_to_float(fix_rightshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_rightshift(fix_min, 2), fix_to_float(fix_rightshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_rightshift(fix_min, 3), fix_to_float(fix_rightshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_rightshift(fix_min, 4), fix_to_float(fix_rightshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_rightshift(fix_min, 5), fix_to_float(fix_rightshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_rightshift(fix_min, 6), fix_to_float(fix_rightshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_rightshift(fix_min, 7), fix_to_float(fix_rightshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_rightshift(fix_min, 8), fix_to_float(fix_rightshift(fix_min, 8)));
+
+	fix_min = fix_rightshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_rightshift(fix_min, 1), fix_to_float(fix_rightshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_rightshift(fix_min, 2), fix_to_float(fix_rightshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_rightshift(fix_min, 3), fix_to_float(fix_rightshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_rightshift(fix_min, 4), fix_to_float(fix_rightshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_rightshift(fix_min, 5), fix_to_float(fix_rightshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_rightshift(fix_min, 6), fix_to_float(fix_rightshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_rightshift(fix_min, 7), fix_to_float(fix_rightshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_rightshift(fix_min, 8), fix_to_float(fix_rightshift(fix_min, 8)));
+
+	fix_min = fix_rightshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_rightshift(fix_min, 1), fix_to_float(fix_rightshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_rightshift(fix_min, 2), fix_to_float(fix_rightshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_rightshift(fix_min, 3), fix_to_float(fix_rightshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_rightshift(fix_min, 4), fix_to_float(fix_rightshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_rightshift(fix_min, 5), fix_to_float(fix_rightshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_rightshift(fix_min, 6), fix_to_float(fix_rightshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_rightshift(fix_min, 7), fix_to_float(fix_rightshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_rightshift(fix_min, 8), fix_to_float(fix_rightshift(fix_min, 8)));
+
+	fix_min = fix_rightshift(fix_min, 8);
+
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 1, fix_rightshift(fix_min, 1), fix_to_float(fix_rightshift(fix_min, 1)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 2, fix_rightshift(fix_min, 2), fix_to_float(fix_rightshift(fix_min, 2)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 3, fix_rightshift(fix_min, 3), fix_to_float(fix_rightshift(fix_min, 3)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 4, fix_rightshift(fix_min, 4), fix_to_float(fix_rightshift(fix_min, 4)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 5, fix_rightshift(fix_min, 5), fix_to_float(fix_rightshift(fix_min, 5)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 6, fix_rightshift(fix_min, 6), fix_to_float(fix_rightshift(fix_min, 6)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 7, fix_rightshift(fix_min, 7), fix_to_float(fix_rightshift(fix_min, 7)));
+	printf("fix_min = %d (%.9f) >%d> %d (%.9f)\n", fix_min, fix_to_float(fix_min), 8, fix_rightshift(fix_min, 8), fix_to_float(fix_rightshift(fix_min, 8)));
+
+}
+
 int main()
 {
 	add_test();
@@ -160,5 +391,7 @@ int main()
 	mul_test();
 	mac_test();
 	msub_test();
+	lshift_test();
+	rshift_test();
 	return 0;
 }
